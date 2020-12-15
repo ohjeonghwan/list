@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv = "Content-Type"content = "text / html; charset = UTF-8"/>
+<title> 카톡 공유 </ title>
+<script type = "text / JavaScript"src = "https://developers.kakao.com/sdk/js/kakao.min.js"> </ script>
+</ head>
+<body>
+    <input type = "button"onClick = " sendLinkCustom (); " value = "사용자 지정"/>
+    <input type = "button"onClick = "sendLinkDefault ();" value = "Default"/>
+
+<script type = "text / javascript">
+    function sendLinkCustom () {
+        Kakao.init ( "38b03d6f19484729d309e94170886d92");
+        카카오 링크.
+            sendCustom ({ templateId : [템플릿 ID]
+        });
+    }
+</ script>
+
+<script>
+try {
+  function sendLinkDefault () {
+    Kakao.init ( "38b03d6f19484729d309e94170886d92")
+    Kakao.Link.sendDefault ({
+      objectType : 'feed',
+      content : {
+        title : '딸기 치즈 케익',
+        설명 : '# 케익 # 딸기 # 삼평동 # 카페 # 분위기 # 소개팅 ',
+        imageUrl :
+          'http ://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png ',
+        링크 : {
+          mobileWebUrl :'https://developers.kakao.com ' ,
+          webUrl : 'https://developers.kakao.com',
+        },
+      },
+      소셜 : {
+        likeCount : 286,
+        commentCount : 45,
+        sharedCount : 845,
+      },
+      버튼 : [
+        {
+          제목 : '웹으로보기',
+          링크 : {
+            mobileWebUrl : 'https://developers.kakao.com',
+            webUrl : 'https://developers.kakao.com',
+          },
+        },
+        {
+          제목 : '앱으로 보기 ',
+          링크 : {
+            mobileWebUrl :'https://developers.kakao.com ',
+            webUrl :'https://developers.kakao.com ',
+          },
+        },
+      ],
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback ()}
+catch (e) {window.kakaoDemoException && window.kakaoDemoException (e)}
+</ script>
+   
+</ body>
+<
