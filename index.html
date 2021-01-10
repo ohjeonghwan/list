@@ -12,7 +12,7 @@
     function sendLinkCustom() {
         Kakao.init("38b03d6f19484729d309e94170886d92");
         Kakao.Link.sendCustom({
-            templateId:44371
+            templateId: 44371
         });
     }
 </script>
@@ -22,7 +22,7 @@ try {
   function sendLinkDefault() {
     Kakao.init('38b03d6f19484729d309e94170886d92')
     Kakao.Link.sendDefault({
-      objectType: 'feed',
+      objectType: 'list',
       content: {
         title: '테스트 중입니다',
         description: '테스트 중입니다',
