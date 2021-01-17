@@ -23,7 +23,11 @@ try {
     Kakao.init('38b03d6f19484729d309e94170886d92')
     Kakao.Link.sendDefault({
       objectType: 'list',
-      headerTitle: 'WEEKLY MAGAZINE',
+    navigationOptions = {
+    headerTitleStyle: { alignSelf: 'center' },
+    title: 'Center Title',
+     },
+
       headerLink: {
         mobileWebUrl: 'https://developers.kakao.com',
         webUrl: 'https://developers.kakao.com',
